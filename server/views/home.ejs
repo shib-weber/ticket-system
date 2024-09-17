@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/homest2.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+
+<body>
+    <h1>Welcome <%= name %></h1>
+    <button id="logout">Logout</button>
+
+    <div class="register">
+        <h2>Registered Users</h2>
+        <div id="userTable">
+            <!-- User details will be dynamically populated here -->
+        </div>
+    </div>
+
+    <div class="button-container">
+        <button id="startBooking">Start Booking</button>
+        <button id="stopBooking">Stop Booking</button>
+        <button id="downloadExcel"><i class="fas fa-file-excel"></i> Download Excel</button>
+        <button id="downloadPDF"><i class="fas fa-file-pdf"></i> Download PDF</button>
+    </div>
+
+    <div class="chart-container">
+        <div>
+            <h1>Daily Registration Stat</h1>
+            <canvas id="ticketChart" width="300" height="300"></canvas>
+        </div>
+        <div>
+            <h1>Event Days Stat</h1>
+            <canvas id="ticketChart2" width="300" height="300"></canvas>
+        </div>
+    </div>
+
+
+
+<script src="/homejs.js"></script>
+
+</body>
+</html>

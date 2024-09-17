@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head') %>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/signupst.css">
+</head>
+<body>
+    <%- include('./partials/nav') %>
+    <div id="animation-container">
+        <% if (locals.message) { %>
+            <h3><%= message %></h3>
+           <% } %>
+        <div class="formcontent">
+            <h1>LOGIN</h1>
+                <form action="/api/admin/login" method="post" id="up">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" required>
+                    <label for="password">Password</label>
+                    <input type="password" name="password" required>
+                    <button type="submit" id="sbt">Login</button>
+                </form>
+        </div>
+    </div>
+    <%- include('./partials/script') %>
+</body>
+</html>
